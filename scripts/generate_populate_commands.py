@@ -20,7 +20,7 @@ def create_md5_dict(md5_file):
     return d
 
 def fh_setup():
-    output_file_path = "populate-drs-dataset.sql"
+    output_file_path = os.path.join("sql", "populate-drs-dataset.sql")
     output_fh = open(output_file_path, "w")
     output_fh.write("")
     output_fh.close()
