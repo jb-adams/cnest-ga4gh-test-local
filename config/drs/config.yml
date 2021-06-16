@@ -1,0 +1,17 @@
+drs:
+  serverProps:
+    scheme: http
+    hostname: localhost
+    publicApiPort: 5050
+    adminApiPort: 5060
+  databaseProps:
+    url: jdbc:sqlite:/db/cnest-ga4gh-test.db
+  serviceInfo:
+    id: org.ga4gh.cnest.drs
+    name: CNest test DRS service
+    organization:
+      name: GA4GH
+      url: https://ga4gh.org
+  drsServiceProps:
+    serveFileURLForFileObjects: false
+    serveFileURLForFileObjects: true
