@@ -13,5 +13,5 @@ drs:
       name: GA4GH
       url: https://ga4gh.org
   drsServiceProps:
-    serveFileURLForFileObjects: false
     serveFileURLForFileObjects: true
+    serveStreamURLForFileObjects: false

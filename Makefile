@@ -3,14 +3,12 @@ DB := db/cnest-ga4gh-test.db
 DOCKER_IMG_DRS=ga4gh/ga4gh-starter-kit-drs:0.1.6
 DOCKER_NAME_DRS=cnest-ga4gh-test-drs
 
-#  -c /config/config.yml
-
 Nothing:
 	@echo "No target provided. Stop"
 
 .PHONY: setup-db
 setup-db:
-	@python scripts/generate_populate_commands.py /Volumes/ftp-private.ebi.ac.uk/upload/cnest_tests/downsample .downsample .bam application/bam .bam.bai application/bai /Volumes/ftp-private.ebi.ac.uk/upload/cnest_tests/md5.downsample
+	@python scripts/generate_populate_commands.py /Users/jadams/Test/21/210519-cnest-attempts/data/downsample .downsample .bam application/bam .bam.bai application/bai /Users/jadams/Test/21/210519-cnest-attempts/data/md5.downsample
 	@sqlite3 ${DB} < sql/create-drs-tables.sql
 	@sqlite3 ${DB} < sql/create-wes-tables.sql
 	@sqlite3 ${DB} < ${POPULATE_SQL_FILE}
