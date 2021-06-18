@@ -1,0 +1,37 @@
+{
+  "alnformat": "bam",
+  "ref": "drs://localhost:5050/ref.GRCh38",
+  
+  "name_0": "HG00443",
+  "name_1": "HG00446",
+  "name_2": "HG00448",
+  "name_3": "HG00449",
+  "name_4": "HG00451",
+  "name_5": "HG00512",
+  "name_6": "HG00513",
+  "name_7": "HG00514",
+  "name_8": "HG00731",
+  "name_9": "HG00732",
+
+  "aln_0": "drs://localhost:5050/cnest.HG00443.alignment",
+  "aln_1": "drs://localhost:5050/cnest.HG00446.alignment",
+  "aln_2": "drs://localhost:5050/cnest.HG00448.alignment",
+  "aln_3": "drs://localhost:5050/cnest.HG00449.alignment",
+  "aln_4": "drs://localhost:5050/cnest.HG00451.alignment",
+  "aln_5": "drs://localhost:5050/cnest.HG00512.alignment",
+  "aln_6": "drs://localhost:5050/cnest.HG00513.alignment",
+  "aln_7": "drs://localhost:5050/cnest.HG00514.alignment",
+  "aln_8": "drs://localhost:5050/cnest.HG00731.alignment",
+  "aln_9": "drs://localhost:5050/cnest.HG00732.alignment",
+
+  "idx_0": "drs://localhost:5050/cnest.HG00443.index",
+  "idx_1": "drs://localhost:5050/cnest.HG00446.index",
+  "idx_2": "drs://localhost:5050/cnest.HG00448.index",
+  "idx_3": "drs://localhost:5050/cnest.HG00449.index",
+  "idx_4": "drs://localhost:5050/cnest.HG00451.index",
+  "idx_5": "drs://localhost:5050/cnest.HG00512.index",
+  "idx_6": "drs://localhost:5050/cnest.HG00513.index",
+  "idx_7": "drs://localhost:5050/cnest.HG00514.index",
+  "idx_8": "drs://localhost:5050/cnest.HG00731.index",
+  "idx_9": "drs://localhost:5050/cnest.HG00732.index"
+}
