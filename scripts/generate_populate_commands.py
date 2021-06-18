@@ -1,3 +1,4 @@
+import hashlib
 import os
 import sys
 
@@ -9,6 +10,7 @@ alignment_mime_type = sys.argv[4]
 index_file_suffix = sys.argv[5]
 index_file_mime_type = sys.argv[6]
 md5_file = sys.argv[7]
+reference_file = sys.argv[8]
 
 def create_md5_dict(md5_file):
     d = {}
@@ -30,6 +32,32 @@ def fh_setup():
 
 def fh_close(output_fh):
     output_fh.close()
+
+def sql_reference_file(fh):
+    sql = ""
+
+    drs_object_id = "ref.GRCh38"
+    size = os.path.getsize(reference_file)
+    md5 = hashlib.md5(open(reference_file, 'rb').read()).hexdigest()
+
+    # create drsobject
+    sql += """INSERT INTO drs_object (id, description, created_time, mime_type, name, size, updated_time, version)
+VALUES ("%s", "CNest test reference file", "%s", "application/fasta", "CNest test reference file", %s, "%s", "1.0.0");
+""" % (drs_object_id, timestamp, size, timestamp)
+
+    # create alias
+    sql += """INSERT INTO drs_object_alias VALUES ("%s", "REF-GRCh38");
+""" % (drs_object_id)
+
+    # create md5 checksum
+    sql += """INSERT INTO drs_object_checksum (drs_object_id, checksum, type) VALUES ("%s", "%s", "md5");
+""" % (drs_object_id, md5)
+
+    # create file access object
+    sql += """INSERT INTO file_access_object (drs_object_id, path) VALUES ("%s", "%s");
+""" % (drs_object_id, reference_file)
+
+    fh.write(sql)
 
 def sql_root_bundle(fh):
     sql = """
@@ -105,6 +133,9 @@ def main():
     # initial setup
     output_fh = fh_setup()
     md5_dict = create_md5_dict(md5_file)
+
+    #create sql for the reference file
+    sql_reference_file(output_fh)
 
     # create sql for the root bundle
     sql_root_bundle(output_fh)

@@ -1,0 +1,22 @@
+{
+  "alnformat": "bam",
+  "ref": "drs://localhost:5050/ref.GRCh38",
+
+  "name_0": "HG00443",
+  "name_1": "HG00446",
+  "name_2": "HG00448",
+  "name_3": "HG00449",
+  "name_4": "HG00451",
+
+  "aln_0": "drs://localhost:5050/cnest.HG00443.alignment",
+  "aln_1": "drs://localhost:5050/cnest.HG00446.alignment",
+  "aln_2": "drs://localhost:5050/cnest.HG00448.alignment",
+  "aln_3": "drs://localhost:5050/cnest.HG00449.alignment",
+  "aln_4": "drs://localhost:5050/cnest.HG00451.alignment",
+
+  "idx_0": "drs://localhost:5050/cnest.HG00443.index",
+  "idx_1": "drs://localhost:5050/cnest.HG00446.index",
+  "idx_2": "drs://localhost:5050/cnest.HG00448.index",
+  "idx_3": "drs://localhost:5050/cnest.HG00449.index",
+  "idx_4": "drs://localhost:5050/cnest.HG00451.index"
+}

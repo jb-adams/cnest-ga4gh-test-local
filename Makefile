@@ -8,7 +8,7 @@ Nothing:
 
 .PHONY: setup-db
 setup-db:
-	@python scripts/generate_populate_commands.py /Users/jadams/Test/21/210519-cnest-attempts/data/downsample .downsample .bam application/bam .bam.bai application/bai /Users/jadams/Test/21/210519-cnest-attempts/data/md5.downsample
+	@python scripts/generate_populate_commands.py /Users/jadams/Test/21/210519-cnest-attempts/data/downsample .downsample .bam application/bam .bam.bai application/bai /Users/jadams/Test/21/210519-cnest-attempts/data/md5.downsample /Users/jadams/Test/21/210519-cnest-attempts/data/ref/GRCh38_full_analysis_set_plus_decoy_hla.fa
 	@sqlite3 ${DB} < sql/create-drs-tables.sql
 	@sqlite3 ${DB} < sql/create-wes-tables.sql
 	@sqlite3 ${DB} < ${POPULATE_SQL_FILE}
